@@ -1,0 +1,189 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.close {
+  display: flex;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.email-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Space between rows */
+  align-items: flex-start; /* Aligns entire form content to start */
+  width: 100%; /* Ensures full container width */
+}
+
+.form-row {
+  display: flex;
+  align-items: center; /* Aligns items horizontally */
+  justify-content: space-between; /* Ensures proper spacing between input and CC/BCC */
+  width: 90%; /* Makes row take full width */
+  gap: 10px; /* Gap between label and input */
+}
+
+.form-row label {
+  font-weight: bold;
+  flex-shrink: 0; /* Prevents label from shrinking */
+}
+
+.form-row input {
+  flex-grow: 1; /* Allows input field to grow and fill available space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: #f9f9f9;
+}
+
+.form-row input:focus {
+  border-color: #007bff;
+}
+
+.cc-bcc {
+  font-size: 0.9rem;
+  color: #007bff;
+  cursor: pointer;
+  align-self: flex-end; /* Aligns CC/BCC to the end of the form-row */
+  align-items: center;
+  margin-left: 5px; /* Adds a slight gap to the input field */
+}
+
+
+.email-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-greeting {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.textarea {
+  width: 500px;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  
+}
+
+.toolbar button {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.email-attachment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Button */
+.btn-send{
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  padding: 8px 25px;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 20px;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 30px;
+}
+
+.send, .send-later, .remind-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 6px 20px;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #52514d;
+  border-radius: 60px;
+}
+
+/* Upload Files */
+.file-icon {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.file-upload {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.upload-progress {
+  display: flex;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+.file-input {
+  display: none;
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
